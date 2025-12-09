@@ -1,12 +1,14 @@
+from http.client import responses
+
 import pytest
 import time
+
+import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import Keys
-
-
 
 @pytest.fixture()
 def test_Setup():
@@ -44,8 +46,15 @@ def test_Work_flow(test_Setup):
  Click_Into_Cart.click()
  driver.save_screenshot("Click_Into_Cart.png")
  time.sleep(15)
-
  driver.quit()
+
+def test_Api_Test():
+
+ payload={"Product":"Vivo latest model"}
+ response=requests.get("https://www.flipkart.com/api/requests",params=payload)
+ data=response.status_code
+ print(data)
+
 
 
 

@@ -7,5 +7,6 @@
     <orderEntry type="module" module-name="SampleClubFactory" />
     <orderEntry type="module" module-name="SeleniumPython" />
     <orderEntry type="module" module-name="DharakaSample" />
+    <orderEntry type="module" module-name="DemoPytest" />
   </component>
 </module>
